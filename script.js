@@ -40,13 +40,6 @@
 
        
 
-        // 要素を監視
-        document.querySelectorAll('.blog-card, .section-title').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
 
         // 日本時間を表示する関数
         function updateJapanTime() {
