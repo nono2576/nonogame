@@ -38,6 +38,44 @@
             });
         });
 
+       
+
+        // 要素を監視
+        document.querySelectorAll('.blog-card, .section-title').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // 日本時間を表示する関数
+        function updateJapanTime() {
+            const now = new Date();
+            const japanTime = new Date(now.toLocaleString("en-US", {timeZone: "Asia/Tokyo"}));
+            
+            const options = {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZone: 'Asia/Tokyo'
+            };
+            
+            const timeString = japanTime.toLocaleString('ja-JP', options);
+            const timeElement = document.getElementById('japan-time');
+            if (timeElement) {
+                timeElement.textContent = `日本時間: ${timeString}`;
+            }
+        }
+
+        // ページ読み込み時に時間を表示し、1秒ごとに更新
+        document.addEventListener('DOMContentLoaded', () => {
+            updateJapanTime();
+            setInterval(updateJapanTime, 1000);
+        });
+
         // フェードインアニメーション
         const observerOptions = {
             threshold: 0.1,
