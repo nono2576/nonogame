@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "date": "2026-01-12",
+      "template": "text-image",
+      "title": "新しいRPGを始めました！",
+      "content": "ずっと気になっていたファンタジーRPGをついに購入♡\nキャラメイクに2時間かけちゃいました...髪型選ぶの楽しすぎる！\n\n主人公は魔法使いにしたんだけど、序盤から魔法がキラキラで可愛い✨\nストーリーもすごく引き込まれる感じで、これは毎日プレイしそう。",
+      "image": "images/rpg-character.jpg",
+      "tags": ["RPG", "はじめて", "キャラメイク"]
+    },
+    {
+      "date": "2026-01-11",
+      "template": "text-video",
+      "title": "ボス戦の動画撮れた！",
+      "content": "昨日から苦戦してたボス、ついに倒せました！\n最後のHPギリギリで勝てて超ドキドキした...\n\n戦闘BGMもかっこよくて、動画に撮っておいてよかった。\n次のエリアに進むのが楽しみ🎮",
+      "video": "videos/boss-battle.mp4",
+      "tags": ["攻略", "ボス戦", "動画"]
+    },
+    {
+      "date": "2026-01-10",
+      "template": "screenshot-gallery",
+      "title": "今週のベストスクショ",
+      "content": "今週撮った中でお気に入りのスクリーンショットをまとめてみました！\n風景がきれいなゲームって本当に癒される...",
+      "images": [
+        "images/screenshot1.jpg",
+        "images/screenshot2.jpg",
+        "images/screenshot3.jpg",
+        "images/screenshot4.jpg"
+      ],
+      "tags": ["スクショ", "ギャラリー", "風景"]
+    },
+    {
+      "date": "2026-01-09",
+      "template": "image-diary",
+      "title": "このシーン泣いちゃった",
+      "content": "メインストーリーのこのシーン、まさか展開が...\nネタバレになるから詳しく書けないけど、涙止まらなかった😭",
+      "image": "images/emotional-scene.jpg",
+      "tags": ["ストーリー", "感動"]
+    },
+    {
+      "date": "2026-01-08",
+      "template": "text-images",
+      "title": "新しい装備ゲット！",
+      "content": "レアドロップで伝説の装備が出た！\nこの見た目めちゃくちゃ好み♡\n\n能力値もかなり上がって、これで次のダンジョンも行けそう。\nコーディネート考えるの楽しい...",
+      "images": [
+        "images/equipment1.jpg",
+        "images/equipment2.jpg"
+      ],
+      "tags": ["装備", "レアドロップ", "コーデ"]
+    },
+    {
+      "date": "2026-01-07",
+      "template": "text-only",
+      "title": "今日は進められなかった",
+      "content": "今日は仕事が遅くなっちゃって、ゲームできず...\n明日は休みだからたくさんプレイするぞ！\n\n次のボス戦に向けて装備整えたり、サブクエストやったり、やりたいことたくさん。\n早く続きがやりたいな〜",
+      "tags": ["日記", "つぶやき"]
+    }
+  ]
+}

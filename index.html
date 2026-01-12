@@ -3,114 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ののゲーム - 干物女のゲームブログ</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>ゲーム日記 ♡</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">ののゲーム</div>
-            <div class="header-info">
-                <div id="japan-time" class="time-display"></div>
-                <ul class="nav-links">
-                    <li><a href="#home">ホーム</a></li>
-                    <li><a href="#reviews">プロフィール</a></li>
-                    <li><a href="#news">ゲーム</a></li>
-                    <li><a href="#about">日常</a></li>
-                    <li><a href="#contact">コンタクト</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        <header class="blog-header">
+            <h1>🎮 ゲーム日記 ♡</h1>
+            <p class="subtitle">毎日のゲームライフを記録中</p>
+        </header>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>休日の干物</h1>
-                <p>ゲームの忘備録。今までに遊んだゲームをゆるく紹介します。</p>
-                <a href="#blog" class="cta-button">最新記事を読む</a>
-            </div>
+        <div class="filter-section">
+            <button class="filter-btn active" data-tag="all">すべて</button>
+            <div id="tag-filters"></div>
         </div>
-    </section>
 
-    <section class="featured-game">
-        <div class="container">
-            <div class="featured-content">
-                <div class="game-info">
-                    <h2>今月の注目ゲーム</h2>
-                    <div class="game-rating">
-                        <div class="stars">★★★★★</div>
-                        <span class="rating-score">9.2/10</span>
-                    </div>
-                    <p class="game-description">革新的なゲームプレイと美しいビジュアルが融合した、今年最高のアクションRPG。プレイヤーの選択が世界を変える、真の意味でのインタラクティブ体験を提供します。</p>
-                    <a href="#" class="read-more">詳細レビューを読む →</a>
-                </div>
-                <div class="game-image">
-                    <div class="game-placeholder">ゲーム画像</div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <main id="posts-container" class="posts-container">
+            <div class="loading">記事を読み込んでいます...</div>
+        </main>
 
-    <section class="blog-section" id="blog">
-        <div class="container">
-            <h2 class="section-title">最新の記事</h2>
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <h3>次世代RPGの進化論</h3>
-                    <div class="blog-meta">
-                        <span>2025年7月25日</span>
-                        <span>レビュー</span>
-                    </div>
-                    <p class="blog-excerpt">従来のRPGの枠を超えた革新的なゲームデザインについて、開発者インタビューを交えながら深く掘り下げます。プレイヤーの選択がもたらす影響とは...</p>
-                    <a href="#" class="read-more">続きを読む →</a>
-                </article>
+        <footer class="blog-footer">
+            <p>© 2026 My Game Blog ♡ Powered by GitHub Pages</p>
+        </footer>
+    </div>
 
-                <article class="blog-card">
-                    <h3>インディーゲームの隠れた名作10選</h3>
-                    <div class="blog-meta">
-                        <span>2025年7月22日</span>
-                        <span>特集</span>
-                    </div>
-                    <p class="blog-excerpt">大手メーカーでは作れない独創的なアイデアと情熱が詰まった、見逃せないインディーゲームを厳選してご紹介。あなたの知らない世界がここに...</p>
-                    <a href="#" class="read-more">続きを読む →</a>
-                </article>
-
-                <article class="blog-card">
-                    <h3>ゲーミングデバイス比較レビュー</h3>
-                    <div class="blog-meta">
-                        <span>2025年7月20日</span>
-                        <span>ハードウェア</span>
-                    </div>
-                    <p class="blog-excerpt">最新のゲーミングマウス、キーボード、ヘッドセットを実際に使用して徹底比較。プロゲーマーの意見も交えた実用的なレビューをお届けします...</p>
-                    <a href="#" class="read-more">続きを読む →</a>
-                </article>
-
-                <article class="blog-card">
-                    <h3>VRゲームの現在と未来</h3>
-                    <div class="blog-meta">
-                        <span>2025年7月18日</span>
-                        <span>テクノロジー</span>
-                    </div>
-                    <p class="blog-excerpt">VR技術の進歩とともに進化するゲーム体験。最新のVRヘッドセットとゲームタイトルを通して、仮想現実の可能性を探ります...</p>
-                    <a href="#" class="read-more">続きを読む →</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="#">Twitter</a>
-                <a href="#">YouTube</a>
-                <a href="#">Discord</a>
-                <a href="#">Twitch</a>
-            </div>
-            <p class="footer-text">&copy; 2025 GameVerse. All rights reserved. | 大人のためのゲームブログ</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
