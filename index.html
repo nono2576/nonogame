@@ -3,30 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ゲーム日記 ♡</title>
+    <title>ゲーム日記 ♡ - トップ</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="blog-header">
-            <h1>🎮 ゲーム日記 ♡</h1>
-            <p class="subtitle">毎日のゲームライフを記録中</p>
-        </header>
-
-        <div class="filter-section">
-            <button class="filter-btn active" data-tag="all">すべて</button>
-            <div id="tag-filters"></div>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🎮 ゲーム日記</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">トップ</a>
+                <a href="blog.html" class="nav-link">ブログ</a>
+                <a href="profile.html" class="nav-link">プロフィール</a>
+            </div>
+            <div class="nav-clock" id="clock"></div>
         </div>
+    </nav>
 
-        <main id="posts-container" class="posts-container">
-            <div class="loading">記事を読み込んでいます...</div>
-        </main>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">ゲーム日記へようこそ ♡</h1>
+            <p class="hero-subtitle">毎日のゲームライフを楽しく記録しています</p>
+            <div class="hero-buttons">
+                <a href="blog.html" class="btn btn-primary">ブログを見る</a>
+                <a href="profile.html" class="btn btn-secondary">プロフィール</a>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-icon">🎮</div>
+            <div class="floating-icon">✨</div>
+            <div class="floating-icon">🌸</div>
+            <div class="floating-icon">🎨</div>
+        </div>
+    </section>
 
-        <footer class="blog-footer">
-            <p>© 2026 My Game Blog ♡ Powered by GitHub Pages</p>
-        </footer>
-    </div>
+    <!-- 紹介セクション -->
+    <section class="intro-section">
+        <div class="container">
+            <h2 class="section-title">このブログについて</h2>
+            <div class="intro-cards">
+                <div class="intro-card">
+                    <div class="intro-icon">📝</div>
+                    <h3>日記形式</h3>
+                    <p>毎日のゲームプレイを日記として記録しています</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">📸</div>
+                    <h3>スクショ満載</h3>
+                    <p>お気に入りのシーンをたくさん撮影してシェア</p>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-icon">🎬</div>
+                    <h3>動画も投稿</h3>
+                    <p>プレイ動画やハイライトシーンも公開中</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最近の記事セクション -->
+    <section class="recent-posts-section">
+        <div class="container">
+            <h2 class="section-title">最近の記事</h2>
+            <div id="recent-posts" class="recent-posts-grid">
+                <div class="loading">記事を読み込んでいます...</div>
+            </div>
+            <div class="text-center">
+                <a href="blog.html" class="btn btn-primary">すべての記事を見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="blog-footer">
+        <p>© 2026 My Game Blog ♡ Powered by GitHub Pages</p>
+    </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // トップページ用：最近の3件を表示
+        async function loadRecentPosts() {
+            try {
+                const response = await fetch('posts/posts.json');
+                const data = await response.json();
+                const recentPosts = data.posts.slice(0, 3);
+                
+                const container = document.getElementById('recent-posts');
+                container.innerHTML = recentPosts.map(post => `
+                    <div class="recent-post-card">
+                        <div class="recent-post-date">${formatDate(post.date)}</div>
+                        <h3 class="recent-post-title">${escapeHtml(post.title)}</h3>
+                        ${post.tags ? `
+                            <div class="post-tags">
+                                ${post.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `).join('');
+            } catch (error) {
+                document.getElementById('recent-posts').innerHTML = 
+                    '<div class="loading">記事の読み込みに失敗しました</div>';
+            }
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            return `${year}年${month}月${day}日`;
+        }
+
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // ページ読み込み時に実行
+        document.addEventListener('DOMContentLoaded', loadRecentPosts);
+    </script>
 </body>
 </html>

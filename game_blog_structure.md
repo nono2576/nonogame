@@ -4,15 +4,18 @@
 
 ```
 your-blog/
-├── index.html              # トップページ（記事一覧）
+├── index.html              # トップページ（NEW!）
+├── blog.html              # ブログページ（旧index.html）
+├── profile.html           # プロフィールページ（NEW!）
 ├── css/
 │   └── style.css          # 共通スタイル
 ├── js/
-│   └── main.js            # 共通スクリプト
+│   ├── main.js            # 共通スクリプト
+│   └── blog.js            # ブログ専用スクリプト（NEW!）
 ├── images/                # 画像フォルダ
 ├── videos/                # 動画フォルダ
 └── posts/
-    └── posts.json         # 記事データ（ここを編集するだけ！）
+    └── posts.json         # 記事データ
 ```
 
 ## 🎮 使い方
@@ -37,7 +40,11 @@ your-blog/
 }
 ```
 
-### 2. テンプレート一覧
+### 2. プロフィールページの編集
+
+`profile.html` を直接編集してプロフィール情報をカスタマイズできます。
+
+### 3. テンプレート一覧
 
 - **text-only**: 文字だけの記事
 - **text-image**: 文字+画像1枚
@@ -46,7 +53,7 @@ your-blog/
 - **image-diary**: 画像メインの日記（文字は短め）
 - **screenshot-gallery**: スクリーンショットギャラリー
 
-### 3. 各テンプレートの使い方
+### 4. 各テンプレートの使い方
 
 #### text-only
 ```json
@@ -168,5 +175,6 @@ git push
 ## 🎨 カスタマイズ
 
 - `css/style.css` で色やフォントを変更
-- `js/main.js` で動作をカスタマイズ
-- `index.html` でレイアウト調整
+- `js/main.js` で共通機能をカスタマイズ
+- `js/blog.js` でブログページの動作をカスタマイズ
+- 各HTMLファイルでレイアウト調整

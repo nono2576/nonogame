@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゲーム日記 ♡ - ブログ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🎮 ゲーム日記</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">トップ</a>
+                <a href="blog.html" class="nav-link active">ブログ</a>
+                <a href="profile.html" class="nav-link">プロフィール</a>
+            </div>
+            <div class="nav-clock" id="clock"></div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="blog-header">
+            <h1>📝 ブログ記事一覧</h1>
+            <p class="subtitle">毎日のゲームライフを記録中</p>
+        </header>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-tag="all">すべて</button>
+            <div id="tag-filters"></div>
+        </div>
+
+        <main id="posts-container" class="posts-container">
+            <div class="loading">記事を読み込んでいます...</div>
+        </main>
+
+        <footer class="blog-footer">
+            <p>© 2026 My Game Blog ♡ Powered by GitHub Pages</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
