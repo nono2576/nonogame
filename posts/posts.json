@@ -3,18 +3,19 @@
     {
       "date": "2026-01-13",
       "template": "text-image",
-      "title": "ブログを始めました",
-      "content": "初めてのブログを作ってみました\nちょうど最近始めたStardew Valleyでお祝いイベントしてました",
-      "image": "images/20260112012831_1.jpg",
-      "tags": ["RPG", "はじめて"]
-    },
-    {
-      "date": "2026-01-13",
-      "template": "text-image",
       "title": "Stardew Valley",
       "content": "畑を耕して、家の前に灯りをともしました。\n時間があっという間に溶けていきます('ω')",
       "image": "images/20260117160959_1.jpg",
       "tags": ["RPG","Stardew Valley"]
+    },
+    {
+      "date": "2026-01-13",
+      "template": "text-image",
+      "title": "ブログを始めました",
+      "content": "初めてのブログを作ってみました\nちょうど最近始めたStardew Valleyでお祝いイベントしてました",
+      "image": "images/20260112012831_1.jpg",
+      "tags": ["RPG", "はじめて"]
     }
+    
   ]
 }
